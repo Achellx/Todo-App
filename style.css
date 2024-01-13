@@ -10,6 +10,7 @@
     min-height: 100vh;
     padding: 10px;
     background: #fff;
+    overflow: hidden;
 }
 
 .todo-app {

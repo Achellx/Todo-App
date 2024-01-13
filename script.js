@@ -16,7 +16,7 @@ function addTask() {
     saveData()
 }
 
-listContainer,addEventListener('click', function(e) {
+listContainer.addEventListener('click', function(e) {
     if(e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
         saveData()
@@ -35,3 +35,11 @@ function showTask() {
 }
 
 showTask();
+
+//Button Click on Enter
+
+inputBox.addEventListener("keypress", function(e) {
+    if(e.keyCode === 13/*Enter*/) {
+        addTask();
+    }
+}, false);
