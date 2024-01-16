@@ -7,5 +7,5 @@ Tecnologías:
 * HTML 
 * JavaScript 
 * CSS
-* Tailwind
+* Tailwind CSS
 
