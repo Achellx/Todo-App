@@ -6,5 +6,6 @@ Repositorio para la crecacion de una app to-do para uso personal.
 Tecnologías:
 * HTML 
 * JavaScript 
-* CSS 
+* CSS
+* Tailwind
 
