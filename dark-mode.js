@@ -9,20 +9,20 @@ function toggleDarkMode() {
     } else {
         document.getElementById('toggle').innerHTML = "DRK";
     }
-    saveData();
+    // saveData();
 }
 
-function saveData() {
-    localStorage.setItem('theme', body.classList.contains('dark'));
-}
+// function saveData() {
+//     localStorage.setItem('theme', body.classList.contains('dark'));
+// }
 
-function showTheme() {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'true') {
-        body.classList.add('dark');
-    } else {
-        body.classList.remove('dark');
-    }
-}
+// function showTheme() {
+//     const theme = localStorage.getItem('theme');
+//     if (theme === 'true') {
+//         body.classList.add('dark');
+//     } else {
+//         body.classList.remove('dark');
+//     }
+// }
 
-showTheme();
+// showTheme();
