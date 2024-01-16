@@ -2,11 +2,12 @@ const inputBox = document.getElementById('input-box');
 const listContainer = document.getElementById('list-container');
 
 function addTask() {
-    if(inputBox.value === '') {
+    if (inputBox.value === '') {
         alert('Please enter a task');
     } else {
         let li = document.createElement('li');
         li.innerHTML = inputBox.value;
+        inputBox.classList.toggle('ul');
         listContainer.appendChild(li);
         let span = document.createElement('span');
         span.innerHTML = '\u00d7';
@@ -16,11 +17,11 @@ function addTask() {
     saveData()
 }
 
-listContainer.addEventListener('click', function(e) {
-    if(e.target.tagName === 'LI') {
+listContainer.addEventListener('click', function (e) {
+    if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
         saveData()
-    } else if(e.target.tagName === 'SPAN') {
+    } else if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove();
         saveData()
     }
@@ -30,16 +31,16 @@ function saveData() {
     localStorage.setItem('data', listContainer.innerHTML);
 }
 
+//Button Click on Enter
+
+inputBox.addEventListener("keypress", function (e) {
+    if (e.keyCode === 13/*Enter*/) {
+        addTask();
+    }
+}, false);
+
 function showTask() {
     listContainer.innerHTML = localStorage.getItem('data');
 }
 
 showTask();
-
-//Button Click on Enter
-
-inputBox.addEventListener("keypress", function(e) {
-    if(e.keyCode === 13/*Enter*/) {
-        addTask();
-    }
-}, false);

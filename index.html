@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">  
     <!-- Adding icon to the title -->
-    <link rel="icon" type="image/x-icon" href="images/title-icon.png">
-</head>
+    <link rel="icon" type="image/x-icon" href="images/title-icon.png" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" alt=""></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+  <body>
+    <div
+      id="body"
+      class="container w-full max-w-full min-h-screen p-10px bg-white overflow-hidden dark:bg-neutral-900"
+    >
+      <div
+        id="todo-app"
+        class="todo-app  w-full max-w-540px bg-white mt-100px mx-auto mb-20px pt-40px pl-30px pb-70px dark:bg-neutral-900 "
+      >
+        <h2 class="text-blue-600 text-2xl font-bold flex mb-20px items-center dark:text-white">
+          To-Do List <img class="w-30px ml-10px" src="images/icon.png" alt="" />
+          <!-- <img src="images/brightness.png" alt="" id="toggle"> -->
+        </h2>
+        <div class="row flex items-center content-between bg-regal-blue-light rounded-30px pl-20px mb-25px dark:bg-gray-700">
+          <input class="flex-1 border-none outline-none p-10px bg-transparent font-14px dark:text-neutral-300" type="text" id="input-box" placeholder="Add your text" />
+          <button class="border-none outline-none py-16px px-50px bg-button-green text-white font-16px cursor-pointer rounded-40px dark:bg-green-800" onclick="addTask()">Add</button>
         </div>
+        <ul id="list-container" class="dark:text-neutral-300">
+          <!-- <li class="text-[#555] line-through">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+        </ul> -->
+      </div>
+      <button onclick="toggleDarkMode()" id="toggle" class="absolute w-14 h-14 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold">
+        DRK
+      </button>
     </div>
     <script src="script.js"></script>
-</body>
-
+    <script src="dark-mode.js"></script>
+  </body>
 </html>

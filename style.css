@@ -13,25 +13,30 @@
     overflow: hidden;
 }
 
-.todo-app {
+.todo-app  {
     width: 100%;
     max-width: 540px;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
+    border-radius: 5px;
 }
 
-.todo-app h2 {
+/* .todo-app h2 {
     color: #002765;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr max-content;
     align-items: center;
     margin-bottom: 20px;
-}
+} */
 
-.todo-app h2 img {
+/* .todo-app h2 img {
     width: 30px;
+    height: 30px;
+    background-image: cover;
     margin-left: 10px;
-}
+    align-items: center;
+} */
 
 .row {
     display: flex;
@@ -111,3 +116,4 @@ ul li span {
 ul li span:hover {
     color: #00ba00;
 }
+
